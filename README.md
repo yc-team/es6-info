@@ -89,6 +89,20 @@ g.next(); //{value: undefined, done: true}
 generator提供一种可以暂停执行的函数，yield语句就是暂停标志,next方法遇到yield后，就会暂停执行后面的操作，并将跟在yield后面的那个表达式的值赋给返回对象的value属性。
 
 
+所以可以用generator函数来作lazy
+
+
+```shell
+function* log() {
+	console.log('I am zhangyaochun');
+}
+
+var generator = log();
+
+setTimeout(function(){
+	generator.next();
+}, 4000);
+```
 
 
 
