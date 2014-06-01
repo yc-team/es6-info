@@ -39,7 +39,7 @@ id.next().value;
 
 
 ```shell
-const arr = ['zhang', 'yao', 'chun'];
+var arr = ['zhang', 'yao', 'chun'];
 for (let n of arr) {
 	console.log(n);
 }
