@@ -7,8 +7,8 @@ es6-info
 
 是一种协议，部署next的方法，包含：
 
-1. value属性是当前遍历位置的值
-2. done属性是boolean值，表示是否遍历结束
+1. value属性: 是当前遍历位置的值
+2. done属性: 是boolean值，表示是否遍历结束
 
 举例：
 
