@@ -1,7 +1,16 @@
 es6-info
 ========
 
-> [兼容性检查](http://kangax.github.io/compat-table/es6/)
+> [兼容性检查](http://kangax.github.io/compat-table/es6/) 建议用ff测试一些case
+
+
+
+#### const
+
+用来声明常量，而且声明后的不能改变。而且只在块级作用域有效
+
+
+
 
 #### Iterator
 
@@ -45,6 +54,39 @@ for (let n of arr) {
 }
 ```
 
+
+#### generator函数
+
+内部状态的遍历器，每调用一次，内部的状态会发生改变
+
+特征:
+
+1. function关键字后面有一个星号
+2. 函数体内部有yield语句，定义遍历器的成员（不同的内部状态）
+
+
+代码：
+
+```shell
+function* myGenerator() {
+	yield 'zhang';
+	yield 'yao';
+	yield 'chun';
+}
+
+var g = myGenerator();
+g.next(); //{value: "zhang", done: false}
+g.next(); //{value: "yao", done: false}
+g.next(); //{value: "chun", done: false}
+g.next(); //{value: undefined, done: true}
+```
+
+总结：
+
+1. 调用generator函数，函数并不执行，而是返回遍历器（Iterator）
+2. 调用next方法，遍历yield语句定义的内部状态
+
+generator提供一种可以暂停执行的函数，yield语句就是暂停标志,next方法遇到yield后，就会暂停执行后面的操作，并将跟在yield后面的那个表达式的值赋给返回对象的value属性。
 
 
 
