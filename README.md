@@ -4,6 +4,13 @@ es6-info
 > [兼容性检查](http://kangax.github.io/compat-table/es6/) 建议用ff测试一些case
 
 
+#### 如果开启？
+
+1. chrome开启：
+
+chrome://flags/ 搜索harmony，开启就可以
+
+
 
 #### const
 
